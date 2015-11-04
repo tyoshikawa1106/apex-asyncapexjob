@@ -1,0 +1,7 @@
+<apex:page >
+    <style type="text/css">
+        #vf-page .lists th {
+            min-width: 200px;
+        }
+    </style>
+</apex:page>

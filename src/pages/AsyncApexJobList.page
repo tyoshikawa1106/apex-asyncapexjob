@@ -1,0 +1,57 @@
+<apex:page controller="AsyncApexJobListController" showHeader="true" sidebar="false" tabStyle="AsyncApexJob" id="page">
+
+    <apex:include pageName="AsyncApexJobListCss" />
+
+    <div id="vf-page">
+        <apex:form id="form">
+            <apex:pageBlock mode="edit" id="block">
+                <apex:pageBlockSection title="AsyncApexJob Records" columns="1">
+                    <apex:pageBlockTable value="{!asyncApexJobList}" var="item" styleClass="lists">
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.JobType.Label}">
+                            <apex:outputText value="{!item.JobType}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.Status.Label}">
+                            <apex:outputText value="{!item.Status}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.JobItemsprocessed.Label}">
+                            <apex:outputText value="{!item.JobItemsprocessed}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.TotalJobItems.Label}">
+                            <apex:outputText value="{!item.TotalJobItems}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.NumberOfErrors.Label}">
+                            <apex:outputText value="{!item.NumberOfErrors}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.CompletedDate.Label}">
+                            <apex:outputField value="{!item.CompletedDate}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.LastProcessedOffSet.Label}">
+                            <apex:outputText value="{!item.LastProcessedOffSet}" />
+                        </apex:column>
+                        <apex:column headerValue="ID">
+                            <apex:outputText value="{!item.Id}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.ParentJobId.Label}">
+                            <apex:outputText value="{!item.ParentJobId}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.ApexClassId.Label}">
+                            <apex:outputText value="{!item.ApexClassId}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.CreatedDate.Label}">
+                            <apex:outputField value="{!item.CreatedDate}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.CreatedById.Label}">
+                            <apex:outputText value="{!item.CreatedById}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.MethodName.Label}">
+                            <apex:outputText value="{!item.MethodName}" />
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.AsyncApexJob.Fields.ExtendedStatus.Label}">
+                            <apex:outputText value="{!item.ExtendedStatus}" />
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:form>
+    </div>
+</apex:page>
