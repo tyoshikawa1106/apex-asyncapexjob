@@ -12,7 +12,7 @@ private class AsyncApexJobListDaoTest {
     private static AsyncApexJobListDao dao = new AsyncApexJobListDao();
     private static User testAdminUser = CommonTester.getLoginUser();
 
-	/**
+    /**
      * Apexジョブ情報取得
      */
     static testMethod void getAsyncApexJobListTest() {
