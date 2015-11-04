@@ -9,7 +9,7 @@
 @isTest
 private class AsyncApexJobListControllerTest {
 
-	private static User testAdminUser = CommonTester.getLoginUser();
+    private static User testAdminUser = CommonTester.getLoginUser();
     
     /**
      * コンストラクタ
