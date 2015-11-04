@@ -14,7 +14,7 @@ public with sharing class AsyncApexJobListController {
     /**
      * コンストラクタ
      */
-	public AsyncApexJobListController() {
+    public AsyncApexJobListController() {
         try {
             // Apexジョブ情報取得
             this.asyncApexJobList = this.dao.getAsyncApexJobList();
@@ -22,5 +22,5 @@ public with sharing class AsyncApexJobListController {
             CommonUtil.msgException(e);
             return;
         }
-	}
+    }
 }
